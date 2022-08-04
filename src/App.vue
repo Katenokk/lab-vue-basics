@@ -3,6 +3,10 @@
     <NavBar/>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
+     <article>
+    <button v-if="!signedIn">Log In</button>
+    <button v-if="signedIn">Log Out</button>
+  </article>
     
   </nav>
   <router-view/>
@@ -21,6 +25,11 @@ export default {
   
     NavBar,
     Footer
+  },
+  data() {
+    return {
+      signedIn: false
+    }
   }
 }
 </script>

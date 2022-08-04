@@ -13,6 +13,7 @@
  <br>
  <button @click="changeColor">Change color</button>
  
+ 
 <br>
 <div>
     <div>
@@ -41,7 +42,7 @@ data() {
         {
             id: 1,
             title: "Project1",
-            content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, optio!"
+            content: "Prueba cutre para ver si funciona"
         },
         {
             id: 2,
@@ -73,6 +74,9 @@ methods: {
                 console.log("isTrue"); 
         }
     }
+},
+mounted() {
+    this.sayHello;
 }
 
 }
