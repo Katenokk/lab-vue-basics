@@ -17,8 +17,8 @@
 <div>
     <div>
     <ul >
-        <li v-for="project in projects" :key="project.id"> <!--en la Escuela Vue fucniona sin el :key-->
-        {{project.title}}
+        <li v-for="project in projects" :key="project.id" class="none"> 
+        {{project.title}} <br>
         {{project.content}}</li>
     </ul>
     </div>
@@ -36,28 +36,29 @@ data() {
         name: "",
         isTrue: false,
         size: "small",
-        background: "green"
-        
-    }
-    projects: [
+        background: "green",
+        projects: [
         {
             id: 1,
-            title: Project1,
+            title: "Project1",
             content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, optio!"
         },
         {
             id: 2,
-            title: Project2,
+            title: "Project2",
             content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, optio!"
         },
         {
             id: 3,
-            title: Project3,
+            title: "Project3",
             content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, optio!"
         }
 
 
     ]
+        
+    }
+   
 },
 methods: {
     sayHello() {
@@ -96,6 +97,10 @@ methods: {
 }
 .pink {
     background: pink;
+}
+.none {
+    list-style: none;
+    margin: 1em 0;
 }
 
 </style>
